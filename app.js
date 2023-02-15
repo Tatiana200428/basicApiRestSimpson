@@ -18,9 +18,9 @@ function createCard(character) {
 
   //Añadiendo clases para aplicar estilos
   containerCard.classList.add('container-card');
-  containerCard.classList.add('img-character');
-  containerCard.classList.add('name-character');
-  containerCard.classList.add('quote-character');
+  imgCharacter.classList.add('img-character');
+  nameCharacter.classList.add('name-character');
+  quoteCharacter.classList.add('quote-character');
 
   //Añadiendo elementos sengun la necesidad
   imgCharacter.src = character.image;
@@ -46,6 +46,6 @@ function getCharacter() {
   fetch(URL, requestMethod)
     .then(response => response.json())
     .then(data => createCard(data[0]))
-    .chach(err => console.error(err));
+    .catch(err => console.error(err));
 
 }
